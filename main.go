@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Print(hello.Hello())
+	fmt.Print(hello.Hello("SB"))
 }
