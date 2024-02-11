@@ -7,7 +7,7 @@ import (
 func TestSum(t *testing.T) {
 
 	t.Run("", func(t *testing.T) {
-		numbers := [6]int{1, 2, 3, 4, 5, 6}
+		numbers := []int{1, 2, 3, 4, 5, 6}
 
 		got := Sum(numbers)
 		want := 21
