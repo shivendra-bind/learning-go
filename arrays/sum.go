@@ -18,3 +18,13 @@ func SumAll(numbersToSum ...[]int) []int {
 
 	return sums
 }
+
+func SumAllAppend(numbersToSum ...[]int) []int {
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
+	}
+
+	return sums
+}

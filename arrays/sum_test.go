@@ -28,3 +28,12 @@ func TestSumAll(t *testing.T) {
 		t.Errorf("got %v want  %v", got, want)
 	}
 }
+
+func TestSumAllAppend(t *testing.T) {
+	got := SumAllAppend([]int{3, 3, 3}, []int{0, 9})
+	want := []int{9, 9}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("got %v want  %v", got, want)
+	}
+}

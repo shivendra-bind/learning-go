@@ -9,3 +9,22 @@ Arrays have a fixed capacity which you define when you declare the variable. We 
 
 ### range
 `range` iterates over an array. On each iteration, range returns two values - the index and the value
+
+### Creating a slice with make
+Slices can be created with the built-in make function; this is how you create dynamically-sized arrays.
+
+The make function allocates a zeroed array and returns a slice that refers to that array:
+
+```go
+a := make([]int, 5)  // len(a)=5
+To specify a capacity, pass a third argument to make:
+
+b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+
+b = b[:cap(b)] // len(b)=5, cap(b)=5
+b = b[1:]      // len(b)=4, cap(b)=4
+```
+
+### append
+
+`append` function which takes a slice and a new value, then returns a new slice with all the items in it
