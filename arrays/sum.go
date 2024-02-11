@@ -34,9 +34,10 @@ func SumAllTails(numbersToSum ...[]int) []int {
 
 	for _, numbers := range numbersToSum {
 		if len(numbers) == 0 {
-			continue
+			sums = append(sums, 0)
+		} else {
+			sums = append(sums, Sum(numbers[1:]))
 		}
-		sums = append(sums, Sum(numbers[1:]))
 	}
 
 	return sums
