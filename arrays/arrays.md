@@ -28,3 +28,8 @@ b = b[1:]      // len(b)=4, cap(b)=4
 ### append
 
 `append` function which takes a slice and a new value, then returns a new slice with all the items in it
+
+### slice
+
+`slice[low:high]` syntax for slicing an array
+- it is inclusive of index
