@@ -1,5 +1,7 @@
 package hello
 
+const enHelloPrifix = "Hello, "
+
 func Hello(name string) string {
-	return "Hello, " + name
+	return enHelloPrifix + name
 }
