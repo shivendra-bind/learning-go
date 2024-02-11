@@ -2,7 +2,7 @@ package iteration
 
 import "testing"
 
-func TestRepeate(t *testing.T) {
+func TestRepeat(t *testing.T) {
 	t.Run("repeat charecter 5 times", func(t *testing.T) {
 		got := Repeat("q")
 
@@ -11,4 +11,12 @@ func TestRepeate(t *testing.T) {
 			t.Errorf("expected %q, got %q", expected, got)
 		}
 	})
+}
+
+func BenchmarkRepeat(b *testing.B) {
+
+	for i := 0; i < b.N; i++ {
+		Repeat("a")
+	}
+
 }
