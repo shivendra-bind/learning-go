@@ -28,3 +28,16 @@ func SumAllAppend(numbersToSum ...[]int) []int {
 
 	return sums
 }
+
+func SumAllTails(numbersToSum ...[]int) []int {
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		if len(numbers) == 0 {
+			continue
+		}
+		sums = append(sums, Sum(numbers[1:]))
+	}
+
+	return sums
+}
