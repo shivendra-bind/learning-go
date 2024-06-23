@@ -47,3 +47,9 @@ const Pi = 3.14
 1. In `Go` if a symbol (variables, types, functions et al) starts with a lowercase symbol then it is private outside the package it's defined in.    
 2. In `Go`, when you call a `function` or a `method` the arguments are _**copied**_.
 3.  Pointers let us *point* to some values and then let us change them
+
+### String:
+    1.  syntax:= "" // single line
+    2.  syntax:= ` this
+        is multiple 
+        line`
