@@ -1,6 +1,6 @@
 .PHONY: test-all
 test-all:
-	@go test -v ./... 
+	@gotestsum  
 
 .PHONY: test-bench
 test-bench:
