@@ -3,14 +3,17 @@ package di
 import (
 	"fmt"
 	"io"
-	"time"
 )
 
-func Countdown(w io.Writer) {
+type Sleeper interface {
+	Sleep()
+}
+
+func Countdown(w io.Writer, sleeper Sleeper) {
 	for i := 3; i > 0; i-- {
 
 		fmt.Fprintln(w, i)
-		time.Sleep(1 * time.Second)
+		sleeper.Sleep()
 	}
 	fmt.Fprint(w, "Go!")
 }
